@@ -1,0 +1,58 @@
+#current{
+    background-color:grey;
+}
+
+
+
+
+#side-nav {
+    background-color: #313131;
+
+    width: 200px;
+    height: 300px;
+
+    padding: 20px;
+    padding-left: 0px;
+
+    text-align: center;
+
+    border: black solid 2px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    box-shadow: 5px 5px 10px;
+
+    position: sticky;
+}
+
+#side-nav ul {
+    background-color: rgb(106, 106, 106);
+
+    list-style: none;
+    box-shadow: 5px 5px 10px;
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#side-nav ul li {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(203, 6, 74, 1));
+    background-size: 1500%;
+
+    height: 50px;
+    line-height: 50px;
+
+    transition: all 0.5s ease;
+}
+
+
+
+
+.top {
+    border-top-right-radius: 10px;
+
+}
+
+.bottom {
+    border-bottom-right-radius: 10px;
+}

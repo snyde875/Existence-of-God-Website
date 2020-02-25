@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Does God Exist?
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/god.css">
+    <style>
+        #background-image {
+            background-image: url("images/creation-of-adam.jpg");
+        }
+
+        #title:hover {
+            color: #ffffff;
+            text-shadow: 5px 2px black;
+        }
+
+        #title:hover+#text {
+            opacity: 1;
+            background-color: rgba(49, 49, 49, 0.6);
+        }
+
+        #text {
+            background-color: rgba(49, 49, 49, 0);
+            color: white;
+
+            position: relative;
+            top: -300px;
+
+            width: 500px;
+            margin: auto;
+
+            padding: 10px;
+
+            font-size: 16pt;
+            text-align: center;
+            line-height: 1.5em;
+
+            opacity: 0;
+            transition: all 1.5s ease-in-out;
+
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px black;
+        }
+
+        
+        
+        
+        
+        #vote-bg {
+            height: 200px;
+
+            margin-bottom: 100px;
+            padding-top: 75px;
+
+            font-weight: bold;
+
+            background-color: #313131;
+            box-shadow: 5px 5px 10px;
+
+            position: relative;
+            top: -200px;
+        }
+
+        #vote-wrapper {
+            background-color: #313131;
+
+            height: 120px;
+            width: 100%;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        #vote-bg .box1,
+        #vote-bg .box2,
+        #vote-bg .box3,
+        #vote-bg #box4-right,
+        #vote-bg #box4-left {
+            box-sizing: border-box;
+
+            width: 14.28%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            border: black solid 1px;
+            border-top: black solid 2.5px;
+            border-bottom: black solid 2.5px;
+
+            box-shadow: 2px 2px 10px;
+
+            float: left;
+            transition: all 1s ease;
+        }
+
+        #vote-bg .box1 {
+            background-color: #a7a7a7;
+        }
+
+
+        #vote-bg .box2 {
+            background-color: #828282;
+        }
+
+        #vote-bg .box3 {
+            background-color: #5E5E5E;
+        }
+
+        #vote-bg #box4-right {
+            background-color: #4b4b4b;
+            border-left: black solid 1px;
+        }
+
+        #vote-bg #box4-left {
+            background-color: #4b4b4b;
+            border-right: black solid 1px;
+        }
+
+        #vote-bg .box1:hover,
+        #vote-bg .box2:hover,
+        #vote-bg .box3:hover,
+        #vote-bg #box4-left:hover,
+        #vote-bg #box4-right:hover {
+            background-color: #cb064a;
+            transform: translateY(-10px);
+        }
+
+
+
+
+
+        .dropdown-content {
+            background: #ddd;
+            opacity: 0;
+
+            height: 0;
+            width: 100%;
+
+            font-size: 16pt;
+            padding-top: 100px;
+
+            position: absolute;
+            top: 275px;
+
+            transition: all .5s ease;
+        }
+
+        .box1:hover+.dropdown-content,
+        .box2:hover+.dropdown-content,
+        .box3:hover+.dropdown-content,
+        #box4-left:hover+.dropdown-content,
+        #box4-right:hover+.dropdown-content {
+            height: 200px;
+            opacity: 1;
+        }
+
+
+
+
+
+
+        .backdrop {
+            background-color: #212121;
+
+            width: 100%;
+            height: auto;
+
+            margin-bottom: 0px;
+            text-align: center;
+
+            border-top: black solid 1px;
+            border-bottom: black solid 1px;
+
+            box-shadow: 5px 5px 20px 2px;
+        }
+
+        .wrapper {
+            display: inline-block;
+            background-color: #313131;
+
+            margin-bottom: 10px;
+            padding: 20px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #info {
+            box-sizing: border-box;
+
+            background-color: #D90750;
+            background-color: #B30542;
+
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            margin: auto;
+
+            text-align: center;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #question {
+            background-color: #B30542;
+            background-color: #ddd;
+
+            width: 300px;
+            line-height: 60px;
+
+            text-align: center;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #question-text {
+            box-sizing: border-box;
+
+            background-color: #B30542;
+            background-color: #ddd;
+
+            width: 700px;
+            padding: 20px;
+
+            text-align: center;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background-image">
+        <div id="shade">
+        </div>
+        <div id="title" class="zoom">
+            <h1><em>Does God Exist?</em></h1>
+        </div>
+        <div id="text">
+            <p>It's a question people have been trying to answer for centuries. Check out our arguments index to see a complete list of theories tackling this question!</p>
+        </div>
+    </div>
+    <div id="nav-bg">
+        <nav id="nav-wrapper">
+            <ul>
+                <li class="zoom" id="box1"><a href="index.html">Home</a></li>
+                <li class="zoom" id="box2"><a href="arguments.html">Arguments Index</a></li>
+                <li class="zoom" id="box3"><a href="">About</a></li>
+            </ul>
+            <div class="clear">
+            </div>
+        </nav>
+    </div>
+    <div class="backdrop" style="margin-bottom: 50px; position:relative; top:-200px;">
+        <div class="wrapper">
+            <div id="question">
+                <h2>What do you think?</h2>
+            </div>
+        </div>
+        <br>
+        <div class="wrapper">
+            <div id="question-text">
+                <p>Do you believe in a God or gods? Click on one of the boxes below to submit your vote and see what other people think!</p>
+                <br>
+                <p>Visit the Arguments Index for a complete list of theories attempting to prove and disprove God's existence.</p>
+                <br>
+                <p>Note: this feature is still in progress.</p>
+            </div>
+        </div>
+    </div>
+    <div id="vote-bg">
+        <div id="vote-wrapper">
+
+            <div id="box4-left" class="zoom">Strong<br>Atheism</div>
+            <div class="dropdown-content">
+                <p>"I know there is no God with the same convinction that Jung knows there is one"</p>
+                <br>
+                <p style="font-size:12pt;"><em>0% probability that God exists</em></p>
+            </div>
+            <div class="box3 zoom">De Facto<br> Atheism</div>
+            <div class="dropdown-content">
+                <p>"I don't know for certain, but I think God is very improbable, and I live my life on the assumption that he is not there"</p>
+                <br>
+                <p style="font-size:12pt;"><em>Very low probability that God exists, but short of zero</em></p>
+            </div>
+            <div class="box2 zoom">Favoring<br> Atheism</div>
+            <div class="dropdown-content">
+                <p>"I do not know whether God exists, but I'm inclined to be skeptical"</p>
+                <br>
+                <p style="font-size:12pt;"><em>Lower than 50% but not very low</em></p>
+            </div>
+            <div class="box1 zoom">Completely<br> Impartial</div>
+            <div class="dropdown-content">
+                <p>"God's existence and non-existence are exactly equiprobable"</p>
+                <br>
+                <p style="font-size:12pt;"><em>Exactly 50% probability that God exists</em></p>
+            </div>
+
+            <div class="box2 zoom">Favoring<br> Theism</div>
+            <div class="dropdown-content">
+                <p>"I am very uncertain, but I am inclined to believe in God"</p>
+                <br>
+                <p style="font-size:12pt;"><em>Higher than 50% but not very high</em></p>
+            </div>
+            <div class="box3 zoom">De Facto<br>Theism</div>
+            <div class="dropdown-content">
+                <p>"I do not know for certain, but I strongly believe in God and live my life under the assumption that he is there"</p>
+                <br>
+                <p style="font-size:12pt;"><em>Very high probability that God exists but short of 100%</em></p>
+            </div>
+            <div id="box4-right" class="zoom">Strong<br> Theism</div>
+            <div class="dropdown-content">
+                <p>"I do not believe, I know" - Carl Jung</p>
+                <br>
+                <p style="font-size:12pt;"><em>100% probability that God exists</em></p>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>All images are within the public domain</h4>
+    </footer>
+</body>
+
+</html>

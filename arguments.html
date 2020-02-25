@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arguments</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/god.css">
+
+    <style>
+        #background-image {
+            background-image: url(images/school-of-athens.jpg);
+
+            margin-bottom: 0px;
+        }
+
+        #nav-bg {
+            top: -591px;
+        }
+
+
+
+
+        #wrapper {
+            text-align: center;
+        }
+
+        #table-of-contents {
+            display: inline-block;
+            box-sizing: border-box;
+
+            background-color: #1a1a1a;
+
+            width: 90%;
+
+            margin: auto;
+            margin-bottom: 100px;
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px;
+        }
+
+        #atheist-col {
+            box-sizing: border-box;
+            background-color: #313131;
+
+            float: left;
+            display: block;
+
+            width: 40%;
+            margin-left: 6%;
+            padding: 20px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #theist-col {
+            box-sizing: border-box;
+            background-color: #313131;
+
+            float: right;
+            display: block;
+
+            width: 40%;
+            margin-right: 6%;
+            padding: 20px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #atheist-title-wrapper {
+            box-sizing: border-box;
+
+            background-color: #313131;
+            float: left;
+
+            width: 40%;
+
+            margin: auto;
+            margin-left: 6%;
+            margin-bottom: 20px;
+
+            text-align: center;
+
+            padding: 20px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #theist-title-wrapper {
+            box-sizing: border-box;
+
+            background-color: #313131;
+            float: right;
+
+            width: 40%;
+
+            margin: auto;
+            margin-right: 6%;
+            margin-bottom: 20px;
+
+            text-align: center;
+
+            padding: 20px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #atheist-title {
+            overflow: hidden;
+            background-color: #ddd;
+
+            height: 40px;
+            line-height: 40px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+        #theist-title {
+            overflow: hidden;
+            background-color: #ddd;
+
+            height: 40px;
+            line-height: 40px;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+
+
+
+        .top-box {
+            overflow: hidden;
+            background-color: #6a6a6a;
+
+            background-image: linear-gradient(90deg, #6a6a6a 50%, #cb064a 50%);
+            background-size: 200% 100%;
+
+            width: 95%;
+            height: 50px;
+
+            line-height: 50px;
+            text-align: center;
+
+            margin: auto;
+            margin-top: 10px;
+
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+
+            border: black solid 2px;
+            border-bottom: 0;
+
+            transition: all 0.5s ease;
+        }
+
+        .box {
+            overflow: hidden;
+
+            background-color: #6a6a6a;
+            background-image: linear-gradient(90deg, #6a6a6a 50%, #cb064a 50%);
+            background-size: 200% 100%;
+
+            width: 95%;
+            height: 50px;
+            line-height: 50px;
+
+            margin: auto;
+
+            border: black solid 2px;
+            border-bottom: 0px;
+
+            text-align: center;
+
+            transition: all 0.5s ease;
+        }
+
+        .bottom-box {
+            overflow: hidden;
+
+            background-color: #6a6a6a;
+            background-image: linear-gradient(90deg, #6a6a6a 50%, #cb064a 50%);
+            background-size: 200% 100%;
+
+            width: 95%;
+            height: 50px;
+
+            line-height: 50px;
+            text-align: center;
+
+            margin: auto;
+            /*            margin-top: 10px;*/
+
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            border: black solid 2px;
+
+            transition: all 0.5s ease;
+        }
+
+        .box:hover,
+        .top-box:hover,
+        .bottom-box:hover {
+            background-position: 100% 100%;
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+            /*            border:black solid 5px;*/
+            border: 0px;
+            position: relative;
+            z-index: 10;
+
+        }
+
+
+
+
+
+        .active-box {
+            background-color: #cb064a;
+            overflow: hidden;
+
+            width: 95%;
+            height: 50px;
+            line-height: 50px;
+
+            margin: auto;
+
+            position: relative;
+            z-index: 10;
+
+            transform: scale(1.1);
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+        }
+
+
+
+
+
+        .dropdown-content {
+            opacity: 0;
+            height: 0px;
+
+            background-color: orange;
+            background-color: #313131;
+
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+
+        .dropdown-box {
+            overflow: hidden;
+            box-sizing: border-box;
+
+            background-color: grey;
+
+            width: 80%;
+            height: 50px;
+
+            line-height: 50px;
+
+            margin: auto;
+            display: none;
+
+            border: black solid 1px;
+
+            transition: all 1s ease;
+        }
+
+        .dropdown-box:hover {
+            background-color: #dd005e;
+
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+            border: 0;
+
+            position: relative;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="background-image">
+        <div id="shade">
+        </div>
+        <div id="title" class="zoom">
+            <h1><em>Arguments Index</em></h1>
+        </div>
+    </div>
+    <div id="nav-bg">
+        <nav id="nav-wrapper">
+            <ul>
+                <li class="zoom" id="box1"><a href="index.html">Home</a></li>
+                <li class="zoom" id="box2"><a href="arguments.html">Arguments Index</a></li>
+                <li class="zoom" id="box3"><a href="">About</a></li>
+            </ul>
+            <div class="clear">
+            </div>
+        </nav>
+    </div>
+    <div id="wrapper">
+        <div id="table-of-contents">
+            <div id="atheist-title-wrapper">
+                <div id="atheist-title">
+                    <h2>Atheist Arguments</h2>
+                </div>
+            </div>
+            <div id="theist-title-wrapper">
+                <div id="theist-title">
+                    <h2>Theist Arguments</h2>
+                </div>
+            </div>
+            <div id="atheist-col">
+                <div class="top-box zoom">
+                    <h4>Ultimate Boeing 747 Gambit</h4>
+                </div>
+                <div class="box zoom">
+                    <h4>Irreducible Complexity Fallacy</h4>
+                </div>
+                <div class="box zoom">
+                    <h4>Incompatible Divine Properties</h4>
+                </div>
+                <div class="box zoom">
+                    <h4>Russel's Teapot</h4>
+                </div>
+                <div class="box zoom">
+                    <h4>Poor Design of the Universe</h4>
+                </div>
+                <div class="bottom-box zoom" style="line-height: 25px;">
+                    <h4>Argument from Inadequate<br>Revelations</h4>
+                </div>
+            </div>
+
+            <div id="theist-col">
+                <div id="1" class="top-box zoom" onclick="dropdown(this.id, '300px')">
+                    <h4>Aquinas' Five Ways</h4>
+                </div>
+                <div id="dropdown-content1" class="dropdown-content">
+                    <div class="dropdown-box zoom">
+                        <a href="arguments/theist/aquinas-five-ways/intro.html">
+                            <h5>Introduction</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="arguments/theist/aquinas-five-ways/argument-from-motion.html">
+                            <h5>First Way - Argument from Motion</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom" style="line-height:25px;">
+                        <a href="arguments/theist/aquinas-five-ways/argument-from-efficient-cause.html">
+                            <h5>Second Way - Argument from Efficient<br> Causes</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="arguments/theist/aquinas-five-ways/argument-from-necessity.html">
+                            <h5>Third Way - Argument from Necessity</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="arguments/theist/aquinas-five-ways/argument-from-gradiation.html">
+                            <h5>Fourth Way - Argument from Gradiation</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="arguments/theist/aquinas-five-ways/argument-from-design.html">
+                            <h5>Fifth Way - Argument from Design</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="box zoom">
+                    <h4>Irreducible Complexity</h4>
+                </div>
+                <div id="2" class="box zoom" style="line-height:25px;" onclick="dropdown(this.id, '200px')">
+                    <h4>Descarte's Ontological<br>Argument</h4>
+                </div>
+                <div id="dropdown-content2" class="dropdown-content">
+                    <div class="dropdown-box zoom">
+                        <a href="">
+                            <h5>Introduction</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="">
+                            <h5>First Meditation</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="">
+                            <h5>Second Meditation</h5>
+                        </a>
+                    </div>
+                    <div class="dropdown-box zoom">
+                        <a href="">
+                            <h5>Third Meditation</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="box zoom">
+                    <h4>Anselm's Ontological Argument</h4>
+                </div>
+                <div class="box zoom">
+                    <h4>Argument from Beauty</h4>
+                </div>
+                <div class="bottom-box zoom">
+                    <h4>Argument from Consciousness</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>All images are within the public domain</h4>
+    </footer>
+
+    <script>
+        window.alert("Welcome to the Arguments Index! The only argument set we have available right now is Aquinas' Five Ways, so check that out!");
+
+        var isClosed = [true, true, true, true];
+        var isTop = [false, true, false];
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+
+        function dropdown(id, h) {
+
+            var opacity_open = "1",
+                opacity_closed = "0",
+
+                height_open = h,
+                height_closed = "0",
+
+                i = Number(id),
+                id_name = "dropdown-content" + id,
+
+                drop_element = document.getElementById(id_name),
+                box_element = document.getElementById(id),
+
+                nodes = drop_element.querySelectorAll("div");
+
+
+            if (isClosed[i] == true) {
+                drop_element.style.opacity = opacity_open;
+                drop_element.style.height = height_open;
+
+                if (isTop[i] == true) {
+                    box_element.classList.remove("top-box", "zoom");
+                    box_element.classList.add("active-box");
+                } else {
+                    box_element.classList.remove("box", "zoom");
+                    box_element.classList.add("active-box");
+                }
+
+                for (var j = 0; j < nodes.length; j++) {
+                    nodes[j].style.display = "block";
+                }
+
+                isClosed[i] = false;
+
+            } else {
+                drop_element.style.opacity = opacity_closed;
+                drop_element.style.height = height_closed;
+
+                if (isTop[i] == true) {
+                    box_element.classList.remove("active-box");
+                    box_element.classList.add("top-box", "zoom");
+                } else {
+                    box_element.classList.remove("active-box");
+                    box_element.classList.add("box", "zoom");
+                }
+
+                setTimeout(function() {
+                        for (var j = 0; j < nodes.length; j++) {
+                            nodes[j].style.display = "none";
+                        }
+                        isClosed[i] = true;
+                    },
+                    500);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
